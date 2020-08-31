@@ -171,6 +171,9 @@ namespace Marija_Bozic_Dan_58.ViewModel
         #endregion
 
         #region Method
+        /// <summary>
+        /// SecectO() randomly assigns an "O" value to a free button
+        /// </summary>
 
         public void SecectO()
         {
@@ -193,6 +196,9 @@ namespace Marija_Bozic_Dan_58.ViewModel
             }
             CheckTheWinner();
         }
+        /// <summary>
+        /// Reset() after the game is over and there is no winner it resets the game
+        /// </summary>
         public void Reset()
         {
             for (int i = 0; i < listaXOModela.Count; i++)
@@ -203,6 +209,9 @@ namespace Marija_Bozic_Dan_58.ViewModel
             isEndGame = false;
         }
 
+        /// <summary>
+        /// DisableAll() after the player wins, disable further play
+        /// </summary>
         public void DisableAll()
         {
             foreach(XOModel model in listaXOModela)
@@ -210,6 +219,10 @@ namespace Marija_Bozic_Dan_58.ViewModel
                 model.IsEnabled = false;
             }
         }
+
+        /// <summary>
+        /// CheckTheWinner() after entering the value, it checks if there is a winner
+        /// </summary>
 
         public void CheckTheWinner()
         {
