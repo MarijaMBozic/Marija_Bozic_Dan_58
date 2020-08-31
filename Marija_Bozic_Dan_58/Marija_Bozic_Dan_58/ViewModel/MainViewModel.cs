@@ -10,23 +10,38 @@ namespace Marija_Bozic_Dan_58.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
+        /// <summary>
+        /// listaXOModela contains information on all 9 fields
+        /// </summary>
         List<XOModel> listaXOModela = new List<XOModel>();
+
+        /// <summary>
+        /// freeList contains all fields whose ValueXY==string.Empty
+        /// </summary>
         List<XOModel> freeList = new List<XOModel>();
-        bool isStartOfGame=true;
+
+        /// <summary>
+        /// isStartOfGame indicates when the game started
+        /// </summary>
+        bool isStartOfGame =true;
+
+        /// <summary>
+        /// isEndGame indicates when the game is over
+        /// </summary>
         bool isEndGame;
 
         #region Constructor
         public MainViewModel(MainWindow main)
         {
-            filde_11 = new XOModel("", 11);
-            filde_12 = new XOModel("", 12);
-            filde_13 = new XOModel("", 13);
-            filde_21 = new XOModel("", 21);
-            filde_22 = new XOModel("", 22);
-            filde_23 = new XOModel("", 23);
-            filde_31 = new XOModel("", 31);
-            filde_32 = new XOModel("", 32);
-            filde_33 = new XOModel("", 33);
+            filde_11 = new XOModel(string.Empty);
+            filde_12 = new XOModel(string.Empty);
+            filde_13 = new XOModel(string.Empty);
+            filde_21 = new XOModel(string.Empty);
+            filde_22 = new XOModel(string.Empty);
+            filde_23 = new XOModel(string.Empty);
+            filde_31 = new XOModel(string.Empty);
+            filde_32 = new XOModel(string.Empty);
+            filde_33 = new XOModel(string.Empty);
             listaXOModela.Add(filde_11);
             listaXOModela.Add(filde_12);
             listaXOModela.Add(filde_13);
@@ -165,9 +180,6 @@ namespace Marija_Bozic_Dan_58.ViewModel
                 OnPropertyChanged("Filde_33");
             }
         }
-
-
-
         #endregion
 
         #region Method

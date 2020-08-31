@@ -9,7 +9,6 @@ namespace Marija_Bozic_Dan_58.Model
 {
     public class XOModel:INotifyPropertyChanged
     {
-        public int XY { get; set; }
         public bool isEnabeled=true;
         public bool IsEnabled
         {
@@ -37,9 +36,8 @@ namespace Marija_Bozic_Dan_58.Model
             }        
         }
 
-        public XOModel(string val, int xy)
+        public XOModel(string val)
         {
-            this.XY = xy;
             this.ValueXY = val;
         }
 
